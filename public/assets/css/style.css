@@ -1,0 +1,70 @@
+/***************** Imports *******************/
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/***************** Variables *******************/
+:root {
+	/* Colors */
+	--black-color-00: #000000;
+
+	--facebook-color: #1f7bf2;
+	--twiter-x-color: #080808;
+	--google-plus-color: #e05038;
+
+	--btn-color: #51d397;
+
+	--text--color: #979797;
+
+	--bg-color: #efefef;
+
+	--white-color-00: #ffffff;
+
+	/* Font-Family */
+	--title-ff: 'Sigmar', sans-serif;
+	--text-ff: 'Montserrat', sans-serif;
+
+	/* Font Weight */
+	--normal-fw: 400;
+	--medium-fw: 500;
+
+	/* Font Size */
+	--base-fs: 1rem;
+	--lg-fs: 1.25rem;
+	--xl-fs: 1.85rem;
+
+	/* Border Radius */
+	--btn-radius: 0.35rem;
+}
+
+/***************** General *******************/
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--text-ff);
+	font-weight: var(--normal-fw);
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--bg-color);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	font-family: var(--title-ff);
+	font-weight: var(--normal-fw);
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	border: none;
+	outline: none;
+	font-size: var(--base-fs);
+}
