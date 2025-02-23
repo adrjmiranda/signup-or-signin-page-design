@@ -34,6 +34,13 @@
 
 	/* Border Radius */
 	--btn-radius: 0.35rem;
+	--form-radius: 0.35rem;
+
+	/* Width */
+	--container-mw: 1280px;
+
+	/* Padding */
+	--container-pi: 0.85rem;
 }
 
 /***************** General *******************/
@@ -63,8 +70,72 @@ a {
 	text-decoration: none;
 }
 
+button,
 input {
 	border: none;
 	outline: none;
 	font-size: var(--base-fs);
+	background-color: transparent;
 }
+
+/***************** Reusable *******************/
+.container {
+	max-width: var(--container-mw);
+	padding-inline: var(--container-pi);
+	margin: 0 auto;
+}
+
+/***************** CONTENT *******************/
+#content {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/***************** FORM *******************/
+#form {
+	background-color: var(--white-color-00);
+	display: flex;
+	align-items: center;
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	border-radius: var(--form-radius);
+}
+
+.form-area {
+	display: flex;
+	flex-direction: column;
+	padding: 2rem;
+}
+
+/***************** SIGN UP *******************/
+/* TODO: Create SIGN UP style */
+/************** End of SIGN UP ***************/
+
+/***************** FORM BETWEEN *******************/
+#form-between {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: var(--bg-color);
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.85rem;
+	height: 40px;
+	width: 40px;
+	font-weight: var(--medium-fw);
+}
+/************** End of FORM BETWEEN ***************/
+
+/***************** SIGN IN *******************/
+/* TODO: Create SIGN IN style */
+/************** End of SIGN IN ***************/
+
+/************** End of FORM ***************/
+
+/************** End of CONTENT ***************/
