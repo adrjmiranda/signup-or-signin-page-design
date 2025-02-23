@@ -7,9 +7,9 @@
 	/* Colors */
 	--black-color-00: #000000;
 
-	--facebook-color: #1f7bf2;
-	--twiter-x-color: #080808;
-	--google-plus-color: #e05038;
+	--fb-color: #1f7bf2;
+	--x-color: #080808;
+	--gp-color: #e05038;
 
 	--btn-color: #51d397;
 
@@ -41,6 +41,9 @@
 
 	/* Padding */
 	--container-pi: 0.85rem;
+
+	/* Box Shadow */
+	--light-bs: 1px 1px 25px 1px rgba(0, 0, 0, 0.1);
 }
 
 /***************** General *******************/
@@ -78,11 +81,41 @@ input {
 	background-color: transparent;
 }
 
+button {
+	cursor: pointer;
+}
+
+button i,
+a i {
+	pointer-events: none;
+}
+
 /***************** Reusable *******************/
 .container {
 	max-width: var(--container-mw);
 	padding-inline: var(--container-pi);
 	margin: 0 auto;
+}
+
+.btn {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.85rem;
+	border-radius: var(--btn-radius);
+	width: 100%;
+	color: var(--white-color-00);
+	font-weight: var(--medium-fw);
+	padding-block: 0.85rem;
+	transition: 0.35s ease-in-out;
+	opacity: 0.9;
+	box-shadow: var(--light-bs);
+}
+
+.btn:hover {
+	opacity: 1;
+	box-shadow: 1px 1px 25px 1px rgba(0, 0, 0, 0.15);
 }
 
 /***************** CONTENT *******************/
@@ -97,21 +130,53 @@ input {
 #form {
 	background-color: var(--white-color-00);
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	position: relative;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	border-radius: var(--form-radius);
+	max-width: 750px;
+	overflow: hidden;
+	box-shadow: var(--light-bs);
 }
 
 .form-area {
 	display: flex;
 	flex-direction: column;
-	padding: 2rem;
+	padding: 2.75rem 2.15rem;
+	height: 100%;
+}
+
+.form-title {
+	text-align: center;
+	text-transform: capitalize;
+	font-size: var(--xl-fs);
+	max-width: 90%;
+	line-height: 1.25;
+	color: var(--black-color-00);
+	margin-bottom: 2.35rem;
+}
+
+.form-fields,
+.form-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.form-fields {
+	margin-bottom: 2.25rem;
+}
+
+.form-input {
+	border-bottom: 1px solid #cfcfcf;
+	padding-bottom: 0.55rem;
 }
 
 /***************** SIGN UP *******************/
-/* TODO: Create SIGN UP style */
+.sign-up-btn {
+	background-color: var(--btn-color);
+}
 /************** End of SIGN UP ***************/
 
 /***************** FORM BETWEEN *******************/
@@ -129,11 +194,28 @@ input {
 	height: 40px;
 	width: 40px;
 	font-weight: var(--medium-fw);
+	cursor: default;
 }
 /************** End of FORM BETWEEN ***************/
 
 /***************** SIGN IN *******************/
-/* TODO: Create SIGN IN style */
+#sign-in {
+	background-image: url('../img/colorful-cloud.jpg');
+	background-size: cover;
+	background-position: center;
+}
+
+.fb-btn {
+	background-color: var(--fb-color);
+}
+
+.x-btn {
+	background-color: var(--x-color);
+}
+
+.gp-btn {
+	background-color: var(--gp-color);
+}
 /************** End of SIGN IN ***************/
 
 /************** End of FORM ***************/
