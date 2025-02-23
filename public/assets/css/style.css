@@ -111,6 +111,8 @@ a i {
 	transition: 0.35s ease-in-out;
 	opacity: 0.9;
 	box-shadow: var(--light-bs);
+	text-transform: capitalize;
+	font-size: var(--base-fs);
 }
 
 .btn:hover {
@@ -221,3 +223,53 @@ a i {
 /************** End of FORM ***************/
 
 /************** End of CONTENT ***************/
+
+/***************** Responsiveness *******************/
+@media screen and (max-width: 768px) {
+	/***************** Variables *******************/
+	:root {
+		/* Font Size */
+		--base-fs: 0.9rem;
+		--xl-fs: 1.55rem;
+	}
+
+	/***************** FORM *******************/
+	.form-area {
+		padding: 2.25rem 1.55rem;
+	}
+	/************** End of FORM ***************/
+
+	/***************** FORM BETWEEN *******************/
+	#form-between {
+		height: 35px;
+		width: 35px;
+		font-size: var(--base-fs);
+	}
+	/************** End of FORM BETWEEN ***************/
+}
+
+@media screen and (max-width: 690px) {
+	/***************** Reusable *******************/
+	.container {
+		padding-block: 1.85rem;
+	}
+
+	/***************** FORM *******************/
+	#form {
+		grid-template-columns: 100%;
+		grid-template-rows: repeat(2, 1fr);
+		min-height: 770px;
+	}
+
+	.form-area {
+		justify-content: center;
+	}
+	/************** End of FORM ***************/
+}
+
+@media screen and (max-width: 390px) {
+	/***************** Reusable *******************/
+	.container {
+		padding-inline: calc(var(--container-pi) - 0.25rem);
+	}
+}
